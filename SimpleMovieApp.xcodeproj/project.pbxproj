@@ -63,10 +63,10 @@
 				0497CA62260D29590017EA85 /* AppDelegate.swift */,
 				0497CA64260D29590017EA85 /* SceneDelegate.swift */,
 				04B76EE3260D31BC00CE6B99 /* Resources */,
+				04B76EDF260D318D00CE6B99 /* API */,
+				04B76EE0260D319300CE6B99 /* Models */,
 				04B76EE2260D31AD00CE6B99 /* Views */,
 				04B76EE1260D319B00CE6B99 /* Controllers */,
-				04B76EE0260D319300CE6B99 /* Models */,
-				04B76EDF260D318D00CE6B99 /* API */,
 			);
 			path = SimpleMovieApp;
 			sourceTree = "<group>";
