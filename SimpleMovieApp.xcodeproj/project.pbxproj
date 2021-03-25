@@ -15,6 +15,7 @@
 		0497CA6F260D295F0017EA85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0497CA6E260D295F0017EA85 /* Assets.xcassets */; };
 		0497CA72260D295F0017EA85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0497CA70260D295F0017EA85 /* LaunchScreen.storyboard */; };
 		04B76EE9260D334D00CE6B99 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B76EE8260D334D00CE6B99 /* MovieView.swift */; };
+		04B76EFA260D4BB100CE6B99 /* RelatedMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B76EF9260D4BB100CE6B99 /* RelatedMovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0497CA71260D295F0017EA85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0497CA73260D295F0017EA85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04B76EE8260D334D00CE6B99 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		04B76EF9260D4BB100CE6B99 /* RelatedMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedMovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				04B76EE3260D31BC00CE6B99 /* Resources */,
 				04B76EDF260D318D00CE6B99 /* API */,
 				04B76EE0260D319300CE6B99 /* Models */,
+				04B76EF8260D4BA000CE6B99 /* Cells */,
 				04B76EE2260D31AD00CE6B99 /* Views */,
 				04B76EE1260D319B00CE6B99 /* Controllers */,
 			);
@@ -119,6 +122,14 @@
 				0497CA70260D295F0017EA85 /* LaunchScreen.storyboard */,
 			);
 			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		04B76EF8260D4BA000CE6B99 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				04B76EF9260D4BB100CE6B99 /* RelatedMovieCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 			files = (
 				04B76EE9260D334D00CE6B99 /* MovieView.swift in Sources */,
 				0497CA67260D29590017EA85 /* MovieVC.swift in Sources */,
+				04B76EFA260D4BB100CE6B99 /* RelatedMovieCell.swift in Sources */,
 				0497CA63260D29590017EA85 /* AppDelegate.swift in Sources */,
 				0497CA6D260D29590017EA85 /* SimpleMovieApp.xcdatamodeld in Sources */,
 				0497CA65260D29590017EA85 /* SceneDelegate.swift in Sources */,

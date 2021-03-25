@@ -26,6 +26,9 @@ class MovieVC: UIViewController {
         
         movieView.heartIcon.addGestureRecognizer(tap)
         
+        movieView.tableView.delegate = self
+        movieView.tableView.dataSource = self
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +54,31 @@ class MovieVC: UIViewController {
         }
         
     }
+    
+    
+}
+
+extension MovieVC : UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = RelatedMovieCell(view: view)
+        
+        return cell
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 105
+        
+    }
+    
+    
+    
     
     
 }

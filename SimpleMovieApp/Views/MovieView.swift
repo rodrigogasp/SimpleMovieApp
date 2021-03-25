@@ -127,7 +127,7 @@ class MovieView: UIView {
         
         //-----------------------------Table View --------------------------------------
         
-        tableView = UITableView(frame: CGRect(x: 0, y: yPosition, width: width, height: height - yPosition))
+        tableView = UITableView(frame: CGRect(x: 0, y: yPosition, width: width, height: height - yPosition - UIApplication.shared.statusBarFrame.height))
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: width*0.1, right: 0)
