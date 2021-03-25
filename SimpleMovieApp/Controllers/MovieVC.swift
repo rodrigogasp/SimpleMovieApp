@@ -35,6 +35,8 @@ class MovieVC: UIViewController {
         super.viewWillAppear(animated)
         
         
+        
+        
     }
     
     //MARK: Like Action
