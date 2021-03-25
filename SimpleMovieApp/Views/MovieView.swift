@@ -95,6 +95,7 @@ class MovieView: UIView {
         heartIcon.image = UIImage(named: "emptyHeart")
         heartIcon.contentMode = .scaleAspectFit
         heartIcon.clipsToBounds = true
+        heartIcon.isUserInteractionEnabled = true
         
         scrollView.addSubview(heartIcon)
         
@@ -121,6 +122,8 @@ class MovieView: UIView {
         popularityLabel.center.y = heartIcon.center.y
         
         scrollView.addSubview(popularityLabel)
+        
+        yPosition = yPosition + heartIcon.frame.height + 20
         
         //-----------------------------Table View --------------------------------------
         
