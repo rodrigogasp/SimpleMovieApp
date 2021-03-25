@@ -8,11 +8,17 @@
 import UIKit
 
 class MovieVC: UIViewController {
-
+    
+    //MARK: Variables
+    
+    var movieView : MovieView!
+    
+    //MARK: View
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        movieView = MovieView(view: view, parent: self)
         
     }
     
@@ -21,7 +27,7 @@ class MovieVC: UIViewController {
         
         
     }
-
-
+    
+    
 }
 
