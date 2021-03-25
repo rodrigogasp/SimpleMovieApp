@@ -19,6 +19,8 @@
 		04B76EFF260D509A00CE6B99 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B76EFE260D509A00CE6B99 /* API.swift */; };
 		04B76F0E260D526400CE6B99 /* MovieRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B76F0D260D526400CE6B99 /* MovieRequests.swift */; };
 		04B76F11260D52B100CE6B99 /* ServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B76F10260D52B100CE6B99 /* ServerResponse.swift */; };
+		04B76F1B260D548D00CE6B99 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B76F1A260D548D00CE6B99 /* Movie.swift */; };
+		04B76F22260D559100CE6B99 /* DAOMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B76F21260D559100CE6B99 /* DAOMovie.swift */; };
 		C28EC70BB27EDCCE3513B07E /* Pods_SimpleMovieApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76423550CA124DE0DDA4313B /* Pods_SimpleMovieApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		04B76EFE260D509A00CE6B99 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		04B76F0D260D526400CE6B99 /* MovieRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequests.swift; sourceTree = "<group>"; };
 		04B76F10260D52B100CE6B99 /* ServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerResponse.swift; sourceTree = "<group>"; };
+		04B76F1A260D548D00CE6B99 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		04B76F21260D559100CE6B99 /* DAOMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAOMovie.swift; sourceTree = "<group>"; };
 		26F76AC38F6331FF48A0C1D2 /* Pods-SimpleMovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMovieApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleMovieApp/Pods-SimpleMovieApp.release.xcconfig"; sourceTree = "<group>"; };
 		66CE280E34F932A088546E19 /* Pods-SimpleMovieApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMovieApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMovieApp/Pods-SimpleMovieApp.debug.xcconfig"; sourceTree = "<group>"; };
 		76423550CA124DE0DDA4313B /* Pods_SimpleMovieApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMovieApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +105,8 @@
 		04B76EE0260D319300CE6B99 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				04B76F19260D548200CE6B99 /* DAO */,
+				04B76F18260D547900CE6B99 /* Models-Class */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -146,6 +152,22 @@
 				04B76EF9260D4BB100CE6B99 /* RelatedMovieCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		04B76F18260D547900CE6B99 /* Models-Class */ = {
+			isa = PBXGroup;
+			children = (
+				04B76F1A260D548D00CE6B99 /* Movie.swift */,
+			);
+			path = "Models-Class";
+			sourceTree = "<group>";
+		};
+		04B76F19260D548200CE6B99 /* DAO */ = {
+			isa = PBXGroup;
+			children = (
+				04B76F21260D559100CE6B99 /* DAOMovie.swift */,
+			);
+			path = DAO;
 			sourceTree = "<group>";
 		};
 		B77510FDB29DF69400432742 /* Frameworks */ = {
@@ -283,8 +305,10 @@
 				0497CA67260D29590017EA85 /* MovieVC.swift in Sources */,
 				04B76F0E260D526400CE6B99 /* MovieRequests.swift in Sources */,
 				04B76EFA260D4BB100CE6B99 /* RelatedMovieCell.swift in Sources */,
+				04B76F1B260D548D00CE6B99 /* Movie.swift in Sources */,
 				04B76F11260D52B100CE6B99 /* ServerResponse.swift in Sources */,
 				04B76EFF260D509A00CE6B99 /* API.swift in Sources */,
+				04B76F22260D559100CE6B99 /* DAOMovie.swift in Sources */,
 				0497CA63260D29590017EA85 /* AppDelegate.swift in Sources */,
 				0497CA6D260D29590017EA85 /* SimpleMovieApp.xcdatamodeld in Sources */,
 				0497CA65260D29590017EA85 /* SceneDelegate.swift in Sources */,
