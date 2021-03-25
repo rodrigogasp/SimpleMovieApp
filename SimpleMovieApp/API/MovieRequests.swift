@@ -52,6 +52,8 @@ class MovieRequests {
                 
                 if response.response?.statusCode == 200 {
                     
+                    resposta.movie = DAOMovie.transformJSONInMovie(value as AnyObject)
+                    
                     resposta.success = true
                     
                     callback(resposta)

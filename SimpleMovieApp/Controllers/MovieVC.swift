@@ -15,6 +15,8 @@ class MovieVC: UIViewController {
     
     var liked : Bool = false
     
+    var movie : Movie!
+    
     //MARK: View
     
     override func viewDidLoad() {
@@ -34,6 +36,27 @@ class MovieVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        MovieRequests.getMovieById { (response) in
+            
+            if response.success {
+                
+                self.movie = response.movie
+                
+                
+            } else {
+                
+                
+                
+            }
+            
+        }
+        
+        
+    }
+    
+    //MARK: Set info
+    
+    func setInfo() {
         
         
         

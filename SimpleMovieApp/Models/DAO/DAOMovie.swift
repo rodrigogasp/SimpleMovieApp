@@ -48,6 +48,10 @@ class DAOMovie {
             item.popularity = info
         }
         
+        if let info = JSON["poster_path"] as? String {
+            item.image = "https://image.tmdb.org/t/p/w500" + info
+        }
+        
         if let info = JSON["release_date"] as? String {
             
             let dateFormatter = DateFormatter()

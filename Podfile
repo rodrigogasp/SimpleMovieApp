@@ -7,5 +7,6 @@ target 'SimpleMovieApp' do
 
   # Pods for SimpleMovieApp
   pod 'Alamofire'
+  pod 'SDWebImage'
 
 end

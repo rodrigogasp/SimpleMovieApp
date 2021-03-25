@@ -15,6 +15,7 @@ class Movie {
     var popularity : Int = -1
     var releaseDate : Date!
     var genres : [String] = []
+    var image : String = "" 
     
 }
 

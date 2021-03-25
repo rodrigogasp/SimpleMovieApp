@@ -12,6 +12,7 @@ class ServerResponse {
     var success : Bool = false
     var erroMessage : String = ""
     var statusCode : Int = 0
+    var movie : Movie!
     
     
     init() {
