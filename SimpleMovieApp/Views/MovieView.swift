@@ -54,8 +54,6 @@ class MovieView: UIView {
         movieImage = UIImageView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: width, height: height*0.65))
         movieImage.contentMode = .scaleAspectFill
         movieImage.clipsToBounds = true
-        movieImage.backgroundColor = .red
-        movieImage.image = UIImage(named: "mock")
         
         scrollView.addSubview(movieImage)
         
@@ -69,7 +67,7 @@ class MovieView: UIView {
         
         //-----------------------------Back Button--------------------------------------
         
-        backButton = UIButton(frame: CGRect(x: width*0.05, y: height*0.1, width: 30, height: 30))
+        backButton = UIButton(frame: CGRect(x: width*0.05, y: height*0.075, width: 30, height: 30))
         backButton.backgroundColor = .black
         backButton.setImage(UIImage(named: "back")?.withTintColor(.white), for: .normal)
         backButton.layer.cornerRadius = backButton.frame.height/2
@@ -103,7 +101,6 @@ class MovieView: UIView {
         //-----------------------------Likes Label--------------------------------------
         
         likesLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        likesLabel.text = "1.2K likes"
         likesLabel.textColor = .white
         likesLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         likesLabel.sizeToFit()
@@ -125,7 +122,6 @@ class MovieView: UIView {
         //-----------------------------Popularity Label--------------------------------------
         
         popularityLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
-        popularityLabel.text = "Some mock text"
         popularityLabel.textColor = .white
         popularityLabel.font = UIFont.systemFont(ofSize: 16, weight: .regular)
         popularityLabel.sizeToFit()

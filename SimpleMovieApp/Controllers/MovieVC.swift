@@ -61,7 +61,7 @@ class MovieVC: UIViewController {
                         
                     } else {
                         
-                        
+                        GenericAlert.genericAlert(self, title: "Erro ao carregar filmes similares", message: "", actions: [])
                         
                     }
                     
@@ -69,7 +69,7 @@ class MovieVC: UIViewController {
                 
             } else {
                 
-                
+                GenericAlert.genericAlert(self, title: "Erro ao carregar filme", message: "", actions: [])
                 
             }
             

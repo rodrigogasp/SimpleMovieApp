@@ -33,7 +33,6 @@ class RelatedMovieCell: UITableViewCell {
         mainImage = UIImageView(frame: CGRect(x: width*0.05, y: 0, width: width*0.175, height: height - 10))
         mainImage.contentMode = .scaleAspectFill
         mainImage.clipsToBounds = true
-        mainImage.image = UIImage(named: "mock")
         mainImage.center.y = height/2
         
         contentView.addSubview(mainImage)
