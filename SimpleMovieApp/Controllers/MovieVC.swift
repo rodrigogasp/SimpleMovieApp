@@ -82,6 +82,8 @@ class MovieVC: UIViewController {
         movieView.popularityLabel.frame.origin.x = movieView.likesLabel.frame.origin.x + movieView.likesLabel.frame.width + 10
         movieView.popularityLabel.center.y = movieView.likesLabel.center.y
         
+        movieView.tableView.frame.origin.y = movieView.popularityLabel.frame.origin.y + movieView.popularityLabel.frame.height + 20
+        movieView.tableView.frame.size.height = movieView.scrollView.frame.height - movieView.tableView.frame.origin.y - UIApplication.shared.statusBarFrame.height
 
     }
     
