@@ -40,16 +40,28 @@ class DAOMovie {
             item.title = info
         }
         
-        if let info = JSON["vote_count"] as? Int {
-            item.voteCount = info
+        if let info = JSON["vote_count"] as? Double {
+            
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            formatter.maximumFractionDigits = 1
+            
+            let number = NSNumber(value: info/1000)
+            
+            item.voteCount = formatter.string(from: number)?.replacingOccurrences(of: ",", with: ".") ?? ""
+            
+            
         }
         
-        if let info = JSON["popularity"] as? Int {
-            item.popularity = info
+        if let info = JSON["popularity"] as? Double {
+            
+            item.popularity = String(info)
+                
+
         }
         
         if let info = JSON["poster_path"] as? String {
-            item.image = "https://image.tmdb.org/t/p/w500" + info
+            item.image = "https://image.tmdb.org/t/p/w400" + info
         }
         
         if let info = JSON["release_date"] as? String {

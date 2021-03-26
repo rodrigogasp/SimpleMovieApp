@@ -11,8 +11,8 @@ import UIKit
 class Movie {
     
     var title : String = ""
-    var voteCount : Int = -1
-    var popularity : Int = -1
+    var voteCount : String = ""
+    var popularity : String = ""
     var releaseDate : Date!
     var genres : [String] = []
     var image : String = "" 

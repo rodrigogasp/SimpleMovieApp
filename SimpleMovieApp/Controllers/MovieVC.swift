@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class MovieVC: UIViewController {
     
@@ -42,6 +43,7 @@ class MovieVC: UIViewController {
                 
                 self.movie = response.movie
                 
+                self.setInfo()
                 
             } else {
                 
@@ -58,8 +60,29 @@ class MovieVC: UIViewController {
     
     func setInfo() {
         
+        let url = URL(string: self.movie.image)
         
+        if url != nil {
+            
+            movieView.movieImage.sd_setImage(with: url, completed: nil)
+            
+        }
         
+        movieView.nameLabel.text = self.movie.title
+        movieView.nameLabel.sizeToFit()
+        
+        movieView.heartIcon.frame.origin.y = movieView.nameLabel.frame.origin.y + movieView.nameLabel.frame.height + 5
+        
+        movieView.likesLabel.text = self.movie.voteCount + "k Likes"
+        movieView.likesLabel.sizeToFit()
+        movieView.likesLabel.center.y = movieView.heartIcon.center.y
+        
+        movieView.popularityLabel.text = self.movie.popularity + " de visualizações"
+        movieView.popularityLabel.sizeToFit()
+        movieView.popularityLabel.frame.origin.x = movieView.likesLabel.frame.origin.x + movieView.likesLabel.frame.width + 10
+        movieView.popularityLabel.center.y = movieView.likesLabel.center.y
+        
+
     }
     
     //MARK: Like Action

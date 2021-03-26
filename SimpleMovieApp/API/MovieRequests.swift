@@ -23,11 +23,12 @@ class MovieRequests {
     
     static func getMovieById(callback: @escaping (ServerResponse) -> Void) {
         
-        let newURL = API.host + API.movie + "49530"
+        let newURL = API.host + API.movie + "286217"
         
         var params = [String : Any]()
         
         params["api_key"] = API.sharedInstance.apiKey
+        params["language"] = "pt-BR"
         
         print("resquest - getMovieById")
         print(newURL)

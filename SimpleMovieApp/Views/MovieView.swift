@@ -49,7 +49,7 @@ class MovieView: UIView {
         
         //-----------------------------Movie Image--------------------------------------
         
-        movieImage = UIImageView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: width, height: height*0.5))
+        movieImage = UIImageView(frame: CGRect(x: 0, y: -UIApplication.shared.statusBarFrame.height, width: width, height: height*0.65))
         movieImage.contentMode = .scaleAspectFill
         movieImage.clipsToBounds = true
         movieImage.backgroundColor = .red
@@ -78,8 +78,7 @@ class MovieView: UIView {
         
         //-----------------------------Name Label--------------------------------------
         
-        nameLabel = UILabel(frame: CGRect(x: width*0.05, y: yPosition, width: width*0.5, height: 70))
-        nameLabel.text = "The Very Best of Johnny Depp"
+        nameLabel = UILabel(frame: CGRect(x: width*0.05, y: yPosition, width: width*0.7, height: 70))
         nameLabel.textColor = .white
         nameLabel.font = UIFont.systemFont(ofSize: 26, weight: .bold)
         nameLabel.numberOfLines = 0
