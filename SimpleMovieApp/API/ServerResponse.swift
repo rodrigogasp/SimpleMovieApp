@@ -13,6 +13,7 @@ class ServerResponse {
     var erroMessage : String = ""
     var statusCode : Int = 0
     var movie : Movie!
+    var movies : [Movie] = []
     
     
     init() {

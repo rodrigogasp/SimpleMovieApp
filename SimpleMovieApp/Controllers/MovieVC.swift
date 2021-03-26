@@ -18,6 +18,8 @@ class MovieVC: UIViewController {
     
     var movie : Movie!
     
+    var movieArray : [Movie] = []
+    
     //MARK: View
     
     override func viewDidLoad() {
@@ -37,13 +39,33 @@ class MovieVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        self.startLoading()
+        
         MovieRequests.getMovieById { (response) in
+            
+            self.stopLoading()
             
             if response.success {
                 
                 self.movie = response.movie
                 
                 self.setInfo()
+                
+                MovieRequests.getRelated { (response) in
+                    
+                    if response.success {
+                        
+                        self.movieArray = response.movies
+                        
+                        self.movieView.tableView.reloadData()
+                        
+                    } else {
+                        
+                        
+                        
+                    }
+                    
+                }
                 
             } else {
                 
@@ -110,12 +132,41 @@ class MovieVC: UIViewController {
 
 extension MovieVC : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        
+        movieArray.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = RelatedMovieCell(view: view)
+        
+        let formatter = DateFormatter()
+        
+        formatter.dateFormat = "yyyy"
+        
+        let dateString = formatter.string(from: movieArray[indexPath.row].releaseDate)
+        
+        cell.movieInfo.text = self.movieArray[indexPath.row].title + "\n" + dateString
+        
+        for genre in self.movieArray[indexPath.row].genres {
+            
+            cell.movieInfo.text = cell.movieInfo.text! + " \(genre),"
+            
+        }
+        
+        cell.movieInfo.sizeToFit()
+        cell.movieInfo.center.y = cell.mainImage.center.y
+        
+        let url = URL(string: self.movieArray[indexPath.row].image)
+        
+        if url != nil {
+            
+            cell.mainImage.sd_setImage(with: url, completed: nil)
+            
+        }
+        
+        
         
         return cell
         

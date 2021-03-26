@@ -43,13 +43,11 @@ class RelatedMovieCell: UITableViewCell {
         //---------------------------Movie Title-----------------------------
         
         movieInfo = UILabel(frame: CGRect(x: xPosition, y: 0, width: width*0.8, height: 0))
-        movieInfo.text = "Ed Wood\n1990, Comedy, Drama"
         movieInfo.textColor = .white
         movieInfo.font = UIFont.systemFont(ofSize: 16)
         movieInfo.numberOfLines = 0
         movieInfo.lineBreakMode = .byTruncatingTail
-        movieInfo.sizeToFit()
-        movieInfo.center.y = mainImage.center.y
+        
         
         contentView.addSubview(movieInfo)
 

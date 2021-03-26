@@ -17,7 +17,7 @@ class MovieRequests {
     
     /* *********************************************************************************
      **
-     **  MARK: LogIn
+     **  MARK: Get Movie
      **
      ***********************************************************************************/
     
@@ -60,6 +60,75 @@ class MovieRequests {
                     callback(resposta)
                     
                     return
+                    
+                }
+                
+            case let .failure(error):
+                print(error)
+             
+            }
+            
+            resposta.success = false
+            resposta.erroMessage = "Erro ao carregar filme"
+            
+            callback(resposta)
+            
+        })
+        
+    }
+    
+    /* *********************************************************************************
+     **
+     **  MARK: Get Related
+     **
+     ***********************************************************************************/
+    
+    static func getRelated(callback: @escaping (ServerResponse) -> Void) {
+        
+        let newURL = API.host + API.movie + "286217/similar"
+        
+        var params = [String : Any]()
+        
+        params["api_key"] = API.sharedInstance.apiKey
+        params["language"] = "pt-BR"
+        
+        print("resquest - getRelated")
+        print(newURL)
+        print(params)
+        
+        API.sharedInstance.sessionManager.request(newURL,
+                      method: HTTPMethod.get,
+                      parameters: params,
+                      encoding: URLEncoding.default,
+                      headers: nil
+        ).responseJSON(completionHandler: { response in
+            
+            let resposta = ServerResponse()
+            
+            print("response - getRelated")
+            print(response.result)
+            
+            switch response.result {
+                
+            case let .success(value):
+                resposta.statusCode = response.response?.statusCode ?? 0
+                
+                if response.response?.statusCode == 200 {
+                    
+                    let JSON = value as AnyObject
+                    
+                    if let result = JSON["results"] as? [[String : Any]] {
+                        
+                        resposta.movies = DAOMovie.transformJSONInArrayMovie(result as AnyObject)
+                        
+                        resposta.success = true
+                        
+                        callback(resposta)
+                        
+                        return
+                        
+                    }
+                    
                     
                 }
                 
