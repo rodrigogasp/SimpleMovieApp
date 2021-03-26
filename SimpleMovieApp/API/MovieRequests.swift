@@ -92,10 +92,6 @@ class MovieRequests {
         params["api_key"] = API.sharedInstance.apiKey
         params["language"] = "pt-BR"
         
-        print("resquest - getRelated")
-        print(newURL)
-        print(params)
-        
         API.sharedInstance.sessionManager.request(newURL,
                       method: HTTPMethod.get,
                       parameters: params,
@@ -104,9 +100,6 @@ class MovieRequests {
         ).responseJSON(completionHandler: { response in
             
             let resposta = ServerResponse()
-            
-            print("response - getRelated")
-            print(response.result)
             
             switch response.result {
                 
@@ -133,7 +126,6 @@ class MovieRequests {
                 }
                 
             case let .failure(error):
-                print(error)
              
             }
             

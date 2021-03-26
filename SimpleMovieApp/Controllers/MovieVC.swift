@@ -99,9 +99,12 @@ class MovieVC: UIViewController {
         movieView.likesLabel.sizeToFit()
         movieView.likesLabel.center.y = movieView.heartIcon.center.y
         
+        movieView.cameraIcon.frame.origin.x = movieView.likesLabel.frame.origin.x + movieView.likesLabel.frame.width + 10
+        movieView.cameraIcon.center.y = movieView.heartIcon.center.y
+        
         movieView.popularityLabel.text = self.movie.popularity + " de visualizações"
         movieView.popularityLabel.sizeToFit()
-        movieView.popularityLabel.frame.origin.x = movieView.likesLabel.frame.origin.x + movieView.likesLabel.frame.width + 10
+        movieView.popularityLabel.frame.origin.x = movieView.cameraIcon.frame.origin.x + movieView.cameraIcon.frame.width + 5
         movieView.popularityLabel.center.y = movieView.likesLabel.center.y
         
         movieView.tableView.frame.origin.y = movieView.popularityLabel.frame.origin.y + movieView.popularityLabel.frame.height + 20

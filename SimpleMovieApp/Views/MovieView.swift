@@ -27,6 +27,8 @@ class MovieView: UIView {
     
     var tableView : UITableView!
     
+    var cameraIcon : UIImageView!
+    
     //MARK: Init
     
     init(view: UIView, parent: UIViewController) {
@@ -109,6 +111,16 @@ class MovieView: UIView {
         likesLabel.center.y = heartIcon.center.y
         
         scrollView.addSubview(likesLabel)
+        
+        //-----------------------------Camera Icon--------------------------------------
+        
+        cameraIcon = UIImageView(frame: CGRect(x: width*0.05, y: yPosition, width: 25, height: 25))
+        cameraIcon.image = UIImage(named: "camera")
+        cameraIcon.contentMode = .scaleAspectFit
+        cameraIcon.clipsToBounds = true
+        cameraIcon.isUserInteractionEnabled = true
+        
+        scrollView.addSubview(cameraIcon)
         
         //-----------------------------Popularity Label--------------------------------------
         
